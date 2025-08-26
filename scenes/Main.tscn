@@ -1,0 +1,141 @@
+[gd_scene load_steps=2 format=3 uid="uid://bo6w6wca6lu7x"]
+
+[ext_resource type="Script" uid="uid://1osnfmvaatkw" path="res://scripts/Main.gd" id="1_glv2v"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_glv2v")
+
+[node name="Layout" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="Header" type="VBoxContainer" parent="Layout"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="StocksRow" type="HBoxContainer" parent="Layout/Header"]
+layout_mode = 2
+
+[node name="MoneyLabel" type="Label" parent="Layout/Header/StocksRow"]
+layout_mode = 2
+text = "0 ₠"
+
+[node name="FLabel" type="Label" parent="Layout/Header/StocksRow"]
+layout_mode = 2
+text = "F: 0.00"
+
+[node name="ELabel" type="Label" parent="Layout/Header/StocksRow"]
+layout_mode = 2
+text = "E: 0.00"
+
+[node name="ALabel" type="Label" parent="Layout/Header/StocksRow"]
+layout_mode = 2
+text = "A: 0.00"
+
+[node name="ProdRow" type="HBoxContainer" parent="Layout/Header"]
+layout_mode = 2
+
+[node name="FProdLabel" type="Label" parent="Layout/Header/ProdRow"]
+layout_mode = 2
+text = "F/s: 0.00"
+
+[node name="EProdLabel" type="Label" parent="Layout/Header/ProdRow"]
+layout_mode = 2
+text = "E/s: 0.00"
+
+[node name="AProdLabel" type="Label" parent="Layout/Header/ProdRow"]
+layout_mode = 2
+text = "A/s: 0.00"
+
+[node name="TempRow" type="HBoxContainer" parent="Layout"]
+layout_mode = 2
+
+[node name="TempName" type="Label" parent="Layout/TempRow"]
+layout_mode = 2
+text = "Température"
+
+[node name="TempSlider" type="HSlider" parent="Layout/TempRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 560.0
+max_value = 740.0
+value = 650.0
+
+[node name="TempValue" type="Label" parent="Layout/TempRow"]
+layout_mode = 2
+text = "650"
+
+[node name="BuyPanel" type="PanelContainer" parent="Layout"]
+layout_mode = 2
+
+[node name="BuyMargin" type="MarginContainer" parent="Layout/BuyPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="BuyGrid" type="GridContainer" parent="Layout/BuyPanel/BuyMargin"]
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 4
+columns = 3
+
+[node name="DFName" type="Label" parent="Layout/BuyPanel/BuyMargin/BuyGrid"]
+layout_mode = 2
+text = "Distilleur de Feu (DF)"
+
+[node name="DFCost" type="Label" parent="Layout/BuyPanel/BuyMargin/BuyGrid"]
+layout_mode = 2
+text = "Coût: -"
+
+[node name="DFBuy" type="Button" parent="Layout/BuyPanel/BuyMargin/BuyGrid"]
+layout_mode = 2
+text = "Acheter"
+
+[node name="CEName" type="Label" parent="Layout/BuyPanel/BuyMargin/BuyGrid"]
+layout_mode = 2
+text = "Condenseur d’Eau (CE)"
+
+[node name="CECost" type="Label" parent="Layout/BuyPanel/BuyMargin/BuyGrid"]
+layout_mode = 2
+text = "Coût: -"
+
+[node name="CEBuy" type="Button" parent="Layout/BuyPanel/BuyMargin/BuyGrid"]
+layout_mode = 2
+text = "Acheter"
+
+[node name="EAName" type="Label" parent="Layout/BuyPanel/BuyMargin/BuyGrid"]
+layout_mode = 2
+text = "Éoliseur d’Air (EA)"
+
+[node name="EACost" type="Label" parent="Layout/BuyPanel/BuyMargin/BuyGrid"]
+layout_mode = 2
+text = "Coût: -"
+
+[node name="EABuy" type="Button" parent="Layout/BuyPanel/BuyMargin/BuyGrid"]
+layout_mode = 2
+text = "Acheter"
+
+[node name="AAName" type="Label" parent="Layout/BuyPanel/BuyMargin/BuyGrid"]
+layout_mode = 2
+text = "Atelier d’Alchimie (AA)"
+
+[node name="AACost" type="Label" parent="Layout/BuyPanel/BuyMargin/BuyGrid"]
+layout_mode = 2
+text = "Coût: -"
+
+[node name="AABuy" type="Button" parent="Layout/BuyPanel/BuyMargin/BuyGrid"]
+layout_mode = 2
+text = "Acheter"
+
+[connection signal="value_changed" from="Layout/TempRow/TempSlider" to="." method="_on_temp_slider_value_changed"]
+[connection signal="pressed" from="Layout/BuyPanel/BuyMargin/BuyGrid/DFBuy" to="." method="_on_df_buy_pressed"]
+[connection signal="pressed" from="Layout/BuyPanel/BuyMargin/BuyGrid/CEBuy" to="." method="_on_ce_buy_pressed"]
+[connection signal="pressed" from="Layout/BuyPanel/BuyMargin/BuyGrid/EABuy" to="." method="_on_ea_buy_pressed"]
+[connection signal="pressed" from="Layout/BuyPanel/BuyMargin/BuyGrid/AABuy" to="." method="_on_aa_buy_pressed"]
