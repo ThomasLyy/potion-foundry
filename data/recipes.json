@@ -1,0 +1,23 @@
+[
+  {"id":"R1","name":"Flamme Douce","cost":{"F":1},"price":10,"twin":[620,680],"purity":50,"unlock":"always"},
+  {"id":"R2","name":"Bruine Pure","cost":{"E":1},"price":10,"twin":[580,640],"purity":70,"unlock":"always"},
+  {"id":"R3","name":"Zéphyr Clair","cost":{"A":1},"price":10,"twin":[600,660],"purity":50,"unlock":"always"},
+  {"id":"R4","name":"Vapeur Vive","cost":{"F":1,"E":1},"price":30,"twin":[620,680],"purity":70,
+   "unlock":{"stat":"produced","F":50,"E":50}},
+  {"id":"R5","name":"Mousse Aérienne","cost":{"E":1,"A":1},"price":30,"twin":[600,660],"purity":70,
+   "unlock":{"stat":"produced","E":50,"A":50}},
+  {"id":"R6","name":"Souffle Ardent","cost":{"F":1,"A":1},"price":30,"twin":[640,700],"purity":50,
+   "unlock":{"stat":"produced","F":50,"A":50}},
+  {"id":"R7","name":"Équilibre Primaire","cost":{"F":1,"E":1,"A":1},"price":100,"twin":[620,680],"purity":70,
+   "unlock":{"stat":"produced","F":500,"E":500,"A":500}},
+  {"id":"R8","name":"Tonique d’Ambre","cost":{"E":2,"F":1},"price":160,"twin":[600,660],"purity":90,
+   "unlock":{"requires":["R4"],"achievement":"purete_tier_1"}},
+  {"id":"R9","name":"Brise des Brumes","cost":{"A":2,"E":1},"price":160,"twin":[590,650],"purity":70,
+   "unlock":{"requires":["R5"]}},
+  {"id":"R10","name":"Fournaise Claire","cost":{"F":2,"A":1},"price":160,"twin":[660,720],"purity":70,
+   "unlock":{"requires":["R6"]}},
+  {"id":"R11","name":"Liqueur du Concordat","cost":{"F":2,"E":2},"price":260,"twin":[630,690],"purity":90,
+   "unlock":{"prestige_min":1}},
+  {"id":"R12","name":"Essence Harmonique","cost":{"F":2,"E":2,"A":2},"price":420,"twin":[620,680],"purity":90,
+   "unlock":{"stat":"produced","F":2000,"E":2000,"A":2000}}
+]

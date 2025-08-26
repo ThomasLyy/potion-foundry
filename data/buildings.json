@@ -1,0 +1,6 @@
+[
+  {"id":"DF","name":"Distillateur de Feu","type":"prod","resource":"F","base":0.1,"cost0":15,"r":1.12},
+  {"id":"CE","name":"Condenseur d’Eau","type":"prod","resource":"E","base":0.1,"cost0":15,"r":1.12},
+  {"id":"EA","name":"Éoliseur d’Air","type":"prod","resource":"A","base":0.1,"cost0":15,"r":1.12},
+  {"id":"AA","name":"Atelier d’Alchimie","type":"craft","base":1.0,"cost0":50,"r":1.12}
+]

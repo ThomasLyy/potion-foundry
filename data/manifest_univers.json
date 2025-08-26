@@ -1,0 +1,10 @@
+{
+  "manifest_version": "1.0.0",
+  "universe": "Cycle des Essences",
+  "terms": { "essences": ["F","E","A"], "currency": "₠", "prestige": "Sceaux" },
+  "icons": { "fire":"essence_fire", "water":"essence_water", "air":"essence_air" },
+  "season_calendar": [
+    {"code":"S_AMBRE","months":[3,4,5]},
+    {"code":"S_ECLUSES","months":[9,10,11]}
+  ]
+}

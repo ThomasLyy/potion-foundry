@@ -1,0 +1,9 @@
+[
+  {"id":"UF","name":"Prod Feu +20%","type":"prod","target":"F","mult":1.2,"r":1.18,"cost0":200},
+  {"id":"UE","name":"Prod Eau +20%","type":"prod","target":"E","mult":1.2,"r":1.18,"cost0":200},
+  {"id":"UA","name":"Prod Air +20%","type":"prod","target":"A","mult":1.2,"r":1.18,"cost0":200},
+  {"id":"UAA","name":"Atelier −10% temps","type":"craft_speed","mult":0.9,"r":1.18,"cost0":300},
+  {"id":"UP","name":"Prix potions +10%","type":"price","mult":1.1,"r":1.18,"cost0":400},
+  {"id":"UPUR","name":"Pureté +1 palier","type":"purity_tier","max":3,"r":1.18,"cost0":250},
+  {"id":"USEAL","name":"Effet des Sceaux +2%","type":"seal_effect","mult":1.02,"r":1.20,"cost0":1000,"requires_prestige":1}
+]
