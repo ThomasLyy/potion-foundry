@@ -1,0 +1,24 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Godot caches
+.import/
+.godot/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Build/exports (si tu exportes hors du projet)
+build/
+export/
+
+# Temp files
+*.tmp
+*.temp
+*.log
+
+# Python/other local tools (si jamais)
+__pycache__/
+*.pyc
