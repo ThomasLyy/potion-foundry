@@ -31,3 +31,9 @@ func get_building(id: String) -> Dictionary:
 		if b["id"] == id:
 			return b
 	return {}
+
+func get_upgrade(id: String) -> Dictionary:
+	for u in upgrades:
+		if u["id"] == id:
+			return u
+	return {}

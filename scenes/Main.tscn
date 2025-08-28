@@ -80,62 +80,200 @@ theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="BuyGrid" type="GridContainer" parent="Layout/BuyPanel/BuyMargin"]
+[node name="BuyBody" type="VBoxContainer" parent="Layout/BuyPanel/BuyMargin"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="BuyToolbar" type="HBoxContainer" parent="Layout/BuyPanel/BuyMargin/BuyBody"]
+layout_mode = 2
+
+[node name="QtyLabel" type="Label" parent="Layout/BuyPanel/BuyMargin/BuyBody/BuyToolbar"]
+layout_mode = 2
+text = "Quantité"
+
+[node name="BuyMode" type="OptionButton" parent="Layout/BuyPanel/BuyMargin/BuyBody/BuyToolbar"]
+unique_name_in_owner = true
+layout_mode = 2
+item_count = 3
+popup/item_0/text = "× 1"
+popup/item_0/id = 0
+popup/item_1/text = "× 10"
+popup/item_1/id = 1
+popup/item_2/text = "× Max"
+popup/item_2/id = 2
+
+[node name="BuyGrid" type="GridContainer" parent="Layout/BuyPanel/BuyMargin/BuyBody"]
 layout_mode = 2
 theme_override_constants/h_separation = 8
 theme_override_constants/v_separation = 4
 columns = 3
 
-[node name="DFName" type="Label" parent="Layout/BuyPanel/BuyMargin/BuyGrid"]
+[node name="DFName" type="Label" parent="Layout/BuyPanel/BuyMargin/BuyBody/BuyGrid"]
 layout_mode = 2
 text = "Distilleur de Feu (DF)"
 
-[node name="DFCost" type="Label" parent="Layout/BuyPanel/BuyMargin/BuyGrid"]
+[node name="DFCost" type="Label" parent="Layout/BuyPanel/BuyMargin/BuyBody/BuyGrid"]
 layout_mode = 2
 text = "Coût: -"
 
-[node name="DFBuy" type="Button" parent="Layout/BuyPanel/BuyMargin/BuyGrid"]
+[node name="DFBuy" type="Button" parent="Layout/BuyPanel/BuyMargin/BuyBody/BuyGrid"]
 layout_mode = 2
 text = "Acheter"
 
-[node name="CEName" type="Label" parent="Layout/BuyPanel/BuyMargin/BuyGrid"]
+[node name="CEName" type="Label" parent="Layout/BuyPanel/BuyMargin/BuyBody/BuyGrid"]
 layout_mode = 2
 text = "Condenseur d’Eau (CE)"
 
-[node name="CECost" type="Label" parent="Layout/BuyPanel/BuyMargin/BuyGrid"]
+[node name="CECost" type="Label" parent="Layout/BuyPanel/BuyMargin/BuyBody/BuyGrid"]
 layout_mode = 2
 text = "Coût: -"
 
-[node name="CEBuy" type="Button" parent="Layout/BuyPanel/BuyMargin/BuyGrid"]
+[node name="CEBuy" type="Button" parent="Layout/BuyPanel/BuyMargin/BuyBody/BuyGrid"]
 layout_mode = 2
 text = "Acheter"
 
-[node name="EAName" type="Label" parent="Layout/BuyPanel/BuyMargin/BuyGrid"]
+[node name="EAName" type="Label" parent="Layout/BuyPanel/BuyMargin/BuyBody/BuyGrid"]
 layout_mode = 2
 text = "Éoliseur d’Air (EA)"
 
-[node name="EACost" type="Label" parent="Layout/BuyPanel/BuyMargin/BuyGrid"]
+[node name="EACost" type="Label" parent="Layout/BuyPanel/BuyMargin/BuyBody/BuyGrid"]
 layout_mode = 2
 text = "Coût: -"
 
-[node name="EABuy" type="Button" parent="Layout/BuyPanel/BuyMargin/BuyGrid"]
+[node name="EABuy" type="Button" parent="Layout/BuyPanel/BuyMargin/BuyBody/BuyGrid"]
 layout_mode = 2
 text = "Acheter"
 
-[node name="AAName" type="Label" parent="Layout/BuyPanel/BuyMargin/BuyGrid"]
+[node name="AAName" type="Label" parent="Layout/BuyPanel/BuyMargin/BuyBody/BuyGrid"]
 layout_mode = 2
 text = "Atelier d’Alchimie (AA)"
 
-[node name="AACost" type="Label" parent="Layout/BuyPanel/BuyMargin/BuyGrid"]
+[node name="AACost" type="Label" parent="Layout/BuyPanel/BuyMargin/BuyBody/BuyGrid"]
 layout_mode = 2
 text = "Coût: -"
 
-[node name="AABuy" type="Button" parent="Layout/BuyPanel/BuyMargin/BuyGrid"]
+[node name="AABuy" type="Button" parent="Layout/BuyPanel/BuyMargin/BuyBody/BuyGrid"]
 layout_mode = 2
 text = "Acheter"
 
+[node name="RecipeRow" type="HBoxContainer" parent="Layout"]
+layout_mode = 2
+
+[node name="RecipeLabel" type="Label" parent="Layout/RecipeRow"]
+layout_mode = 2
+text = "Recette"
+
+[node name="RecipeSelect" type="OptionButton" parent="Layout/RecipeRow"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="RecipeInfo" type="Label" parent="Layout/RecipeRow"]
+layout_mode = 2
+
+[node name="UpgradesPanel" type="PanelContainer" parent="Layout"]
+layout_mode = 2
+
+[node name="UpMargin" type="MarginContainer" parent="Layout/UpgradesPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="UpBody" type="VBoxContainer" parent="Layout/UpgradesPanel/UpMargin"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="UpToolbar" type="HBoxContainer" parent="Layout/UpgradesPanel/UpMargin/UpBody"]
+layout_mode = 2
+
+[node name="UpQtyLabel" type="Label" parent="Layout/UpgradesPanel/UpMargin/UpBody/UpToolbar"]
+layout_mode = 2
+text = "Quantité"
+
+[node name="UpgradeMode" type="OptionButton" parent="Layout/UpgradesPanel/UpMargin/UpBody/UpToolbar"]
+unique_name_in_owner = true
+layout_mode = 2
+item_count = 3
+popup/item_0/text = "× 1"
+popup/item_0/id = 0
+popup/item_1/text = "× 10"
+popup/item_1/id = 1
+popup/item_2/text = "× Max"
+popup/item_2/id = 2
+
+[node name="UpGrid" type="GridContainer" parent="Layout/UpgradesPanel/UpMargin/UpBody"]
+layout_mode = 2
+columns = 3
+
+[node name="UAAName" type="Label" parent="Layout/UpgradesPanel/UpMargin/UpBody/UpGrid"]
+layout_mode = 2
+text = "Vitesse Atelier (UAA) — L0"
+
+[node name="UAACost" type="Label" parent="Layout/UpgradesPanel/UpMargin/UpBody/UpGrid"]
+layout_mode = 2
+text = "Coût : -"
+
+[node name="UAABuy" type="Button" parent="Layout/UpgradesPanel/UpMargin/UpBody/UpGrid"]
+layout_mode = 2
+text = "Acheter"
+
+[node name="UPName" type="Label" parent="Layout/UpgradesPanel/UpMargin/UpBody/UpGrid"]
+layout_mode = 2
+text = "Vitesse Atelier (UAA) — L0"
+
+[node name="UPCost" type="Label" parent="Layout/UpgradesPanel/UpMargin/UpBody/UpGrid"]
+layout_mode = 2
+text = "Coût : -"
+
+[node name="UPBuy" type="Button" parent="Layout/UpgradesPanel/UpMargin/UpBody/UpGrid"]
+layout_mode = 2
+text = "Acheter"
+
+[node name="UPURName" type="Label" parent="Layout/UpgradesPanel/UpMargin/UpBody/UpGrid"]
+layout_mode = 2
+text = "Vitesse Atelier (UAA) — L0"
+
+[node name="UPURCost" type="Label" parent="Layout/UpgradesPanel/UpMargin/UpBody/UpGrid"]
+layout_mode = 2
+text = "Coût : -"
+
+[node name="UPURBuy" type="Button" parent="Layout/UpgradesPanel/UpMargin/UpBody/UpGrid"]
+layout_mode = 2
+text = "Acheter"
+
+[node name="ManualRow" type="HBoxContainer" parent="Layout"]
+layout_mode = 2
+
+[node name="ManualLabel" type="Label" parent="Layout/ManualRow"]
+layout_mode = 2
+text = "Manuel"
+
+[node name="AddFBtn" type="Button" parent="Layout/ManualRow"]
+layout_mode = 2
+text = "+F"
+
+[node name="AddEBtn" type="Button" parent="Layout/ManualRow"]
+layout_mode = 2
+text = "+E"
+
+[node name="AddABtn" type="Button" parent="Layout/ManualRow"]
+layout_mode = 2
+text = "+A"
+
 [connection signal="value_changed" from="Layout/TempRow/TempSlider" to="." method="_on_temp_slider_value_changed"]
-[connection signal="pressed" from="Layout/BuyPanel/BuyMargin/BuyGrid/DFBuy" to="." method="_on_df_buy_pressed"]
-[connection signal="pressed" from="Layout/BuyPanel/BuyMargin/BuyGrid/CEBuy" to="." method="_on_ce_buy_pressed"]
-[connection signal="pressed" from="Layout/BuyPanel/BuyMargin/BuyGrid/EABuy" to="." method="_on_ea_buy_pressed"]
-[connection signal="pressed" from="Layout/BuyPanel/BuyMargin/BuyGrid/AABuy" to="." method="_on_aa_buy_pressed"]
+[connection signal="item_selected" from="Layout/BuyPanel/BuyMargin/BuyBody/BuyToolbar/BuyMode" to="." method="_on_buy_mode_item_selected"]
+[connection signal="pressed" from="Layout/BuyPanel/BuyMargin/BuyBody/BuyGrid/DFBuy" to="." method="_on_df_buy_pressed"]
+[connection signal="pressed" from="Layout/BuyPanel/BuyMargin/BuyBody/BuyGrid/CEBuy" to="." method="_on_ce_buy_pressed"]
+[connection signal="pressed" from="Layout/BuyPanel/BuyMargin/BuyBody/BuyGrid/EABuy" to="." method="_on_ea_buy_pressed"]
+[connection signal="pressed" from="Layout/BuyPanel/BuyMargin/BuyBody/BuyGrid/AABuy" to="." method="_on_aa_buy_pressed"]
+[connection signal="item_selected" from="Layout/RecipeRow/RecipeSelect" to="." method="_on_option_button_item_selected"]
+[connection signal="item_selected" from="Layout/UpgradesPanel/UpMargin/UpBody/UpToolbar/UpgradeMode" to="." method="_on_upgrade_mode_item_selected"]
+[connection signal="pressed" from="Layout/UpgradesPanel/UpMargin/UpBody/UpGrid/UAABuy" to="." method="_on_uaa_buy_pressed"]
+[connection signal="pressed" from="Layout/UpgradesPanel/UpMargin/UpBody/UpGrid/UPBuy" to="." method="_on_uaa_buy_pressed"]
+[connection signal="pressed" from="Layout/UpgradesPanel/UpMargin/UpBody/UpGrid/UPBuy" to="." method="_on_up_buy_pressed"]
+[connection signal="pressed" from="Layout/UpgradesPanel/UpMargin/UpBody/UpGrid/UPURBuy" to="." method="_on_uaa_buy_pressed"]
+[connection signal="pressed" from="Layout/UpgradesPanel/UpMargin/UpBody/UpGrid/UPURBuy" to="." method="_on_upur_buy_pressed"]
+[connection signal="pressed" from="Layout/ManualRow/AddFBtn" to="." method="_on_add_f_btn_pressed"]
+[connection signal="pressed" from="Layout/ManualRow/AddEBtn" to="." method="_on_add_e_btn_pressed"]
+[connection signal="pressed" from="Layout/ManualRow/AddABtn" to="." method="_on_add_a_btn_pressed"]
